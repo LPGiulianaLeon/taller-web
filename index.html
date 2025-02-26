@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MECAMAQ</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <div class="logo">
+            <img src="img/logo2.PNG" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN CARROUSEL -->
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="slide active">
+                <img src="img/slider1.png" alt="Slider 1">
+                <div class="caption">EMPRESA DE MANTENIMIENTO A EQUIPOS LIVIANOS, SEMI
+                    PESADOS Y MAQUINARIA PESADA</div>
+            </div>
+            <div class="slide">
+                <img src="img/slider2.png" alt="Slider 2">
+                <div class="caption">Venta de repuestos para tu negocio</div>
+            </div>
+            <div class="slide">
+                <img src="img/slider3.jpg" alt="Slider 3">
+                <div class="caption">Servicios de mantenimiento y reparación</div>
+            </div>
+            <div class="slide active">
+                <img src="img/slider1.png" alt="Slider 1">
+                <div class="caption">EMPRESA DE MANTENIMIENTO A EQUIPOS LIVIANOS, SEMI
+                    PESADOS Y MAQUINARIA PESADA, MECAMAQ S.A.C.</div>
+            </div>
+
+        </div>
+
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <section>
+        <div class="cuerpo1">
+            <div class="texto1">
+                <h1 class="texto-titulo">¿QUIÉNES SOMOS?</h1>
+                <p class="texto-parrafo">MECAMAQ es una empresa peruana con éxito por su continuo crecimiento, adquiriendo cada vez más
+                    experiencia que ayuda a dejar una mejor resultado. Se especializa en mantenimiento
+                    preventivo, mantenimiento correctivo, reparación y evaluación de vehículos livianos, semi
+                    pesados y pesado, ya sean a nivel corporativo o particular.</p>
+                <br>
+                <a class="btn-mas" href="nosotros.html">VER MÁS</a>
+            </div>
+            <div class="imagen1">
+                <img src="./img/nosotros1.JPG" alt="nosotros">
+            </div>
+        </div>
+        <div class="nuestros-servicios">
+            
+            <div class="contenido-servicios">
+                <h1 class="texto-titulo">NUESTROS SERVICIOS</h1>
+                <p class="texto-parrafo">Garantizamos un servicio integral para que su maquinaria funcione con la máxima confiabilidad y desempeño. Ofrecemos mantenimiento, reparación y diagnóstico especializado.</p> 
+                <p class="texto-parrafo">Complementamos nuestros servicios con la venta de repuestos de alta calidad para todo tipo de maquinaria, proporcionando soluciones completas para el óptimo rendimiento y durabilidad de su equipo.</p>
+                <br>
+                <div>
+                    <a class="btn-mas" href="servicios.html">VER MÁS</a>
+                </div>
+            </div>
+           
+            <div class="imagen-servicios">
+                <img src="img/trabajo_taller.png" alt="Trabajo en el taller">
+            </div>
+
+        </div>
+
+
+
+        <div >
+            <div class="texto1">
+                <h1 class="texto-titulo">EMPRESAS QUE CONFIAN EN NOSOTROS</h1>
+            </div>
+        </div>
+
+        <div class="contenedor-logos">
+            <!-- Primera fila de logos -->
+            <div class="logos-fila-1">
+                <img src="img/logos-empresas/unimaq.PNG" alt="logo1">
+                <img src="img/logos-empresas/maquinsa.png" alt="logo2">
+                <img src="img/logos-empresas/kampfer.png" alt="logo3">
+                <img src="img/logos-empresas/LOGO-MURILLO.png" alt="logo4">
+            </div>
+        
+            <!-- Segunda fila de logos (centrados) -->
+            <div class="logos-fila-2">
+                <img src="img/logos-empresas/imco.jpg" alt="logo5">
+                <img src="img/logos-empresas/vistoni.PNG" alt="logo6">
+                <img src="img/logos-empresas/DCR.jpg" alt="logo7">
+            </div>
+        </div>
+
+        
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="img/logo2.PNG" alt="Logo">
+        </div>
+        <div class="footer-contacto">
+            <h2>Contacto</h2>
+            <p><b>Dirección: </b>Av. Unión 422 San Martin de Socabaya - Arequipa</p>
+            <p><b>Correo: </b>Mecamaq.sac@gmail.com</p>
+            <p><b>Teléfonos: </b>949104229 - 940831975</p>
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=+51940831975&text=¡Hola! Quiero más información." 
+   class="whatsapp-fixed" target="_blank">
+    <span class="whatsapp-text">CONSULTA POR <br> <strong>WHATSAPP</strong></span>
+    <img src="img/logo-wsp.png" alt="WhatsApp">
+    </a>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

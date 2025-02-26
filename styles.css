@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+
+.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+  
+
+/* GENERAL */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #cacbc5;
+ 
+}
+
+.logo img {
+    width: 12rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    margin-right: 15rem;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+    font-family: "Space Mono", serif;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #FFC107; /* Amarillo */
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -5px; /* Distancia de la línea */
+    left: 0;
+}
+
+/* Efecto al pasar el mouse */
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Eliminar la línea en la página activa */
+nav ul li a.active::after {
+    display: none;
+}
+
+/* CARRUSEL */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    width: 100%;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+    font-family: "Bebas Neue", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 500px; /* Ajusta según necesites */
+    object-fit: cover;
+}
+
+
+
+/* TEXTO SOBRE LAS IMÁGENES */
+.caption {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+/* BOTONES DE NAVEGACIÓN */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* SECCIÓN DE CUERPO DE PÁGINA */
+.cuerpo1{
+    display: flex;
+    gap: 6rem;
+    margin: 4rem 1rem 4rem 0rem;
+}
+
+.texto-titulo{
+    
+    font-size: 4rem;
+    font-family: "Space Mono", serif;
+    position: relative;
+    
+}
+
+.texto-titulo::after {
+    content: ""; /* Crea el elemento */
+    display: block;
+    width: 5rem; /* Ancho de la línea */
+    height: 0.5rem; /* Grosor de la línea */
+    background-color: #FFC107; /* Amarillo */
+    margin-top: 5px; /* Espaciado debajo del título */
+}
+
+.texto-parrafo{
+    font-family: "Space Mono", serif;
+}
+
+.texto1 {
+    margin-left: 4rem;
+}
+
+.btn-mas{
+    background-color: #FFC107;
+    border-radius: 10px;
+    border: none;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: "Space Mono", serif;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.imagen1{
+    display: flex;
+    position: relative;
+    height: 30rem;
+}
+
+.imagen1::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem; /* Ajusta la distancia desde la imagen */
+    left: -2rem; /* Ajusta la posición del cuadro */
+    width: 100%; /* Ajusta el tamaño del cuadro */
+    height: 13rem; /* Altura del cuadro */
+    background-color: #0A183D; /* Color azul oscuro */
+    z-index: -1; /* Lo envía detrás de la imagen */
+}
+
+.imagen2{
+    display: flex;
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    
+}
+
+
+.imagen2::after {
+    content: "";
+    position: absolute;
+    bottom: -1.5rem; /* Ajusta la distancia desde la imagen */
+    left: -2rem; /* Ajusta la posición del cuadro */
+    width: 150%; /* Ajusta el tamaño del cuadro */
+    height: 13rem; /* Altura del cuadro */
+    background-color: #0A183D; /* Color azul oscuro */
+    z-index: -1; /* Lo envía detrás de la imagen */
+}
+
+/*SECCIÓN CONFIAN EN NOSOTROS*/
+/* Contenedor general */
+.contenedor-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra ambos grids horizontalmente */
+    gap: 1rem; /* Espacio entre los dos grids */
+    margin-bottom: 5rem;
+}
+
+/* Grid para la primera fila (4 logos) */
+.logos-fila-1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 3rem; /* Espacio entre logos */
+    justify-items: center; /* Centra los logos dentro del grid */
+    align-items: center;
+}
+
+/* Grid para la segunda fila (3 logos) */
+.logos-fila-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 5rem;
+    justify-items: center; /* Centra los logos en su grid */
+    align-items: center;
+}
+
+/* Estilos generales para los logos */
+.logos-fila-1 img, .logos-fila-2 img {
+    width: 13rem; /* Ajustar tamaño */
+    height: auto; /* Mantiene proporciones */
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.logos-fila-1 img:hover, .logos-fila-2 img:hover {
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 3 columnas iguales */
+    align-items: center; /* Centra verticalmente */
+    background-color: #cacbc5; /* Color de fondo */
+    color: black; /* Texto en blanco */
+    padding: 20px 5%; /* Espaciado interno */
+}
+
+/* Estilos del logo */
+.footer-logo img {
+    width: 15rem;
+    margin-left: 0.5rem;
+    
+}
+
+/* Estilos del contacto */
+.footer-contacto {
+    text-align: left; /* Alinea el texto a la derecha */
+    font-family: "Arimo", serif;
+}
+
+.footer-contacto p {
+    margin: 5px 0; /* Espaciado entre líneas */
+}
+
+/*Estilos para consulta por whatsapp*/
+
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;  /* Ajusta la distancia desde la parte inferior */
+    right: 20px;   /* Ajusta la distancia desde la derecha */
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 25px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Estilo del texto */
+.whatsapp-text {
+    margin-right: 10px; /* Espacio entre el texto y el icono */
+    text-align: center;
+    font-family: "Arimo", serif;
+}
+
+/* Estilo del icono de WhatsApp */
+.whatsapp-fixed img {
+    width: 40px; /* Tamaño del icono */
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Efecto al pasar el mouse */
+.whatsapp-fixed:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.servicio{
+    display: flex;
+    align-items: center;
+   
+    margin-left: 2rem;
+}
+
+.servicio-icono{
+    width: 2rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.nuestros-servicios{
+    display: flex;
+    
+    gap: 3rem;
+    font-family: "Space Mono", serif;
+    color:white;
+    background-color: black;
+    padding-bottom: 2rem;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+
+
+.imagen-servicios img {
+    width: 100%; /* Se ajusta al tamaño del contenedor */
+    max-width: 100%; /* Máximo ancho de la imagen */
+    height: auto;
+}
+
+.imagen-servicios1 img{
+    width: 80%;
+    height: auto;
+}
+
+.imagen-servicios2{
+    padding-left: 5rem;
+    padding-top:2rem;
+    
+}
+
+.contenido-servicios {
+    flex:1;
+    display: flex;
+    margin-left: 5rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-servicios1 {
+    flex:1;
+    display: flex;
+    margin-left: 2rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Reducir el espacio entre líneas */
+
+
+/******************************* SERVICIOS*********************************/
+
+/* Contenedor de la imagen y el texto */
+.servicios-head {
+    position: relative;
+    width: 100%;
+    height: 18rem; /* Ajusta la altura según necesites */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Evita que el texto se vea antes de la animación */
+}
+
+/* Imagen con opacidad */
+.servicios-head img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6); /* Oscurece la imagen para resaltar el texto */
+}
+
+/* Texto "SERVICIOS" animado */
+.servicios-head h1 {
+    position: absolute;
+    color: white;
+    font-family: "Bebas Neue", serif;
+    font-size: 5rem;
+    
+    text-transform: uppercase;
+    opacity: 0; 
+    animation: slideIn 1.5s ease-out forwards;
+}
+
+/* Animación del texto */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Inicia desde la izquierda */
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0); /* Llega al centro */
+        opacity: 1;
+    }
+}
+
+.texto-titulo2{
+    font-size: 2rem;
+    font-family: "Space Mono", serif;
+    position: relative;
+    margin: 4rem 2rem 2rem 2rem;
+    text-transform: uppercase;
+}
+
+.texto-titulo2::after {
+    content: ""; /* Crea el elemento */
+    display: block;
+    width: 5rem; /* Ancho de la línea */
+    height: 0.5rem; /* Grosor de la línea */
+    background-color: #FFC107; /* Amarillo */
+    margin-top: 5px; /* Espaciado debajo del título */
+}
+
+/**************CONTACTO*****************/
+
+.contacto {
+    margin-left: 4rem;
+}
+
+.contacto-info {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móviles */
+    gap: 1.5rem;
+    max-width: 600px; /* Ancho máximo */
+    margin: auto;
+    padding: 2rem 1rem 5rem 1rem;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin:1rem;
+}
+
+.contacto-item img {
+    width: 50px; /* Tamaño del ícono */
+    height: auto;
+}
+
+.contacto-item h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.contacto-item p {
+    margin: 0;
+    color: #333;
+}
+
+.mapa{
+    width: 100%;
+    height: 30rem;
+    padding-top: 2rem;
+}

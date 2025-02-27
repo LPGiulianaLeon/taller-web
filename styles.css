@@ -59,11 +59,11 @@ nav ul li a::after {
     content: "";
     display: block;
     width: 0;
-    height: 3px;
+    height: 0.2rem;
     background-color: #FFC107; /* Amarillo */
     transition: width 0.3s ease-in-out;
     position: absolute;
-    bottom: -5px; /* Distancia de la línea */
+    bottom: -0.3rem; /* Distancia de la línea */
     left: 0;
 }
 
@@ -87,7 +87,8 @@ nav ul li a.active::after {
 .carousel-container {
     display: flex;
     width: 100%;
-    transition: transform 1s ease-in-out;
+    position: relative;
+    
 }
 
 .slide {
@@ -98,11 +99,16 @@ nav ul li a.active::after {
     font-style: normal;
     font-size: 3rem;
     text-align: center;
+    display: none;
+}
+
+.slide.active {
+    display: block;
 }
 
 .slide img {
     width: 100%;
-    height: 500px; /* Ajusta según necesites */
+    height: 31rem; /* Ajusta según necesites */
     object-fit: cover;
 }
 
@@ -111,13 +117,21 @@ nav ul li a.active::after {
 /* TEXTO SOBRE LAS IMÁGENES */
 .caption {
     position: absolute;
-    top: 20px;
+    top: 1.25rem;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 15px 20px;
+    padding: 1rem 1.25rem;
     border-radius: 5px;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out; /* Hace que aparezca lentamente */
+}
+
+.slide.active .caption {
+    opacity: 1;
+    
 }
 
 /* BOTONES DE NAVEGACIÓN */
@@ -128,13 +142,13 @@ nav ul li a.active::after {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 24px;
+    padding: 0.6rem 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev { left: 0.6rem; }
+.next { right: 0.6rem; }
 
 .prev:hover, .next:hover {
     background: rgba(0, 0, 0, 0.8);
@@ -161,7 +175,7 @@ nav ul li a.active::after {
     width: 5rem; /* Ancho de la línea */
     height: 0.5rem; /* Grosor de la línea */
     background-color: #FFC107; /* Amarillo */
-    margin-top: 5px; /* Espaciado debajo del título */
+    margin-top: 0.3rem; /* Espaciado debajo del título */
 }
 
 .texto-parrafo{
@@ -174,7 +188,7 @@ nav ul li a.active::after {
 
 .btn-mas{
     background-color: #FFC107;
-    border-radius: 10px;
+    border-radius: 0.6rem;
     border: none;
     padding: 1rem 2rem;
     text-decoration: none;
@@ -270,7 +284,7 @@ nav ul li a.active::after {
     align-items: center; /* Centra verticalmente */
     background-color: #cacbc5; /* Color de fondo */
     color: black; /* Texto en blanco */
-    padding: 20px 5%; /* Espaciado interno */
+    padding: 1.25rem 5%; /* Espaciado interno */
 }
 
 /* Estilos del logo */
@@ -287,31 +301,31 @@ nav ul li a.active::after {
 }
 
 .footer-contacto p {
-    margin: 5px 0; /* Espaciado entre líneas */
+    margin: 0.3rem 0; /* Espaciado entre líneas */
 }
 
 /*Estilos para consulta por whatsapp*/
 
 .whatsapp-fixed {
     position: fixed;
-    bottom: 20px;  /* Ajusta la distancia desde la parte inferior */
-    right: 20px;   /* Ajusta la distancia desde la derecha */
+    bottom: 1.25rem;  /* Ajusta la distancia desde la parte inferior */
+    right: 1.25rem;   /* Ajusta la distancia desde la derecha */
     display: flex;
     align-items: center;
     background: white;
-    padding: 10px 15px;
-    border-radius: 25px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+    padding: 0.6rem 0.9rem;
+    border-radius: 1.56rem; /* Bordes redondeados */
+    box-shadow: 0rem 0.25rem 0.6rem rgba(0, 0, 0, 0.2); /* Sombra */
     text-decoration: none;
     color: #000;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: bold;
     transition: 0.3s ease-in-out;
 }
 
 /* Estilo del texto */
 .whatsapp-text {
-    margin-right: 10px; /* Espacio entre el texto y el icono */
+    margin-right: 0.6rem; /* Espacio entre el texto y el icono */
     text-align: center;
     font-family: "Arimo", serif;
 }
@@ -451,7 +465,7 @@ nav ul li a.active::after {
     width: 5rem; /* Ancho de la línea */
     height: 0.5rem; /* Grosor de la línea */
     background-color: #FFC107; /* Amarillo */
-    margin-top: 5px; /* Espaciado debajo del título */
+    margin-top: 0.3rem; /* Espaciado debajo del título */
 }
 
 /**************CONTACTO*****************/
@@ -464,7 +478,7 @@ nav ul li a.active::after {
     display: grid;
     grid-template-columns: 1fr; /* Una columna en móviles */
     gap: 1.5rem;
-    max-width: 600px; /* Ancho máximo */
+    max-width: 37.5rem; /* Ancho máximo */
     margin: auto;
     padding: 2rem 1rem 5rem 1rem;
 }
@@ -477,7 +491,7 @@ nav ul li a.active::after {
 }
 
 .contacto-item img {
-    width: 50px; /* Tamaño del ícono */
+    width: 3.2rem; /* Tamaño del ícono */
     height: auto;
 }
 
@@ -495,4 +509,129 @@ nav ul li a.active::after {
     width: 100%;
     height: 30rem;
     padding-top: 2rem;
+}
+
+/* ---- MENÚ RESPONSIVE ---- */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.6rem;
+    background-color: #FFC107;
+    border-radius: 0.3rem;
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #cacbc5;
+        position: absolute;
+        top: 9rem;
+        left: 10rem;
+        text-align: center;
+        transition: right 0.3s ease-out;
+        z-index: 999;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nav-menu ul li a {
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: large;
+        font-family: "Space Mono", serif;
+        display: inline-block;
+        position: relative;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        right: 0;
+    }
+}
+
+/* ---- AJUSTES GENERALES RESPONSIVE ---- */
+@media (max-width: 1024px) {
+    .cuerpo1, .nuestros-servicios {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .slide img {
+        height: 25rem;
+    }
+
+    .imagen1, .imagen-servicios {
+        width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        flex-direction: column;
+    }
+
+    .slide img {
+        height: 19rem;
+    }
+
+    .caption {
+        font-size: 1.5rem;
+    }
+
+    .texto-titulo {
+        font-size: 2.5rem;
+    }
+
+    .texto-parrafo {
+        font-size: 1rem;
+    }
+
+    .contenedor-logos {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logos-fila-1, .logos-fila-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .whatsapp-fixed {
+        bottom: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide img {
+        height: 16rem;
+    }
 }

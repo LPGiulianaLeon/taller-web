@@ -1,31 +1,38 @@
-let currentIndex = 0;
+let slideIndex = 0;
 const slides = document.querySelectorAll(".slide");
-const totalSlides = slides.length;
-const carouselContainer = document.querySelector(".carousel-container");
 
-// Función para mover el carrusel
 function showSlide(index) {
-    carouselContainer.style.transition = "transform 1s ease-in-out";
-    carouselContainer.style.transform = `translateX(${-index * 100}%)`;
-
-    // Si llegamos a la imagen duplicada, saltamos a la original sin transición
-    setTimeout(() => {
-        if (index === totalSlides - 1) {
-            carouselContainer.style.transition = "none";
-            carouselContainer.style.transform = "translateX(0%)";
-            currentIndex = 0;
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.classList.add("active"); // Activa la imagen y el texto
+        } else {
+            slide.classList.remove("active"); // Oculta las demás imágenes
         }
-    }, 1000); // Se ejecuta justo después de la transición
+    });
 }
 
-// Mover manualmente con botones
+// Ajustamos el tiempo de transición en automático
 function moveSlide(step) {
-    currentIndex += step;
-    showSlide(currentIndex);
+    slideIndex += step;
+    if (slideIndex >= slides.length) slideIndex = 0;
+    if (slideIndex < 0) slideIndex = slides.length - 1;
+    
+    setTimeout(() => {
+        showSlide(slideIndex);
+    }, 500); // Retardo de 0.5 segundos antes de cambiar la imagen
 }
 
-// Cambio automático cada 4 segundos
-setInterval(() => {
-    currentIndex++;
-    showSlide(currentIndex);
-}, 7000);
+// Cambia automáticamente cada 6 segundos en vez de 4
+function autoSlide() {
+    moveSlide(1);
+    setTimeout(autoSlide, 6000); // Cambio más lento
+}
+
+// Iniciar el carrusel
+showSlide(slideIndex);
+setTimeout(autoSlide, 6000);
+
+function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+}

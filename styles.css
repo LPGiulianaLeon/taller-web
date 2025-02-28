@@ -64,7 +64,7 @@ nav ul li a::after {
     display: block;
     width: 0;
     height: 0.2rem;
-    background-color: #FFC107; /* Amarillo */
+    background-color: #FFC107; 
     transition: width 0.3s ease-in-out;
     position: absolute;
     bottom: -0.3rem; /* Distancia de la línea */
@@ -170,7 +170,8 @@ nav ul li a.active::after {
     font-size: 4rem;
     font-family: "Space Mono", serif;
     position: relative;
-    
+    justify-content: left;
+    align-items: left;
 }
 
 .texto-titulo::after {
@@ -368,11 +369,15 @@ nav ul li a.active::after {
     color:white;
     background-color: black;
     padding-bottom: 2rem;
-    align-items: center;
     padding-right: 1rem;
+    align-items: center;
+    
 }
 
-
+.imagen-servicios{
+    align-items: center;
+    justify-content: center;
+}
 
 .imagen-servicios img {
     width: 100%; /* Se ajusta al tamaño del contenedor */
@@ -391,12 +396,12 @@ nav ul li a.active::after {
     
 }
 
-.contenido-servicios {
+ .contenido-servicios{
     flex:1;
     display: flex;
     margin-left: 5rem;
     flex-direction: column;
-    justify-content: center;
+   
 }
 
 .contenido-servicios1 {
@@ -567,32 +572,64 @@ nav ul li a.active::after {
         display: flex;
         right: 0;
     }
+
+    .texto1 {
+        margin-left: 2rem;
+    }
 }
 
 /* ---- AJUSTES GENERALES RESPONSIVE ---- */
 @media (max-width: 1024px) {
-    .cuerpo1, .nuestros-servicios {
+
+    section {
+        margin: 0rem 2rem 2rem 2rem !important;
+    }
+    .nuestros-servicios {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: left;
+        text-align: left;
         gap: 2rem;
         padding: 2rem;
+    }
+
+    .contenido-servicios {
+        margin-left: 2rem;
+    }
+
+    .cuerpo1 {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .texto-parrafo{
+        justify-content: center;
+        align-items: center;
     }
 
     .slide img {
         height: 25rem;
     }
 
-    .imagen1, .imagen-servicios {
+    .imagen-servicios {
         width: 90%;
         height: auto;
     }
+
+    .imagen1 {
+        align-items: center;
+        justify-content: center;
+    }
+
+
 }
 
 @media (max-width: 768px) {
     .carousel-container {
         flex-direction: column;
     }
+
+
 
     .slide img {
         height: 19rem;
@@ -608,6 +645,8 @@ nav ul li a.active::after {
 
     .texto-parrafo {
         font-size: 1rem;
+        justify-content: left;
+        align-items: left;
     }
 
     .contenedor-logos {
@@ -632,10 +671,20 @@ nav ul li a.active::after {
         padding: 0.3rem 0.7rem;
         font-size: 0.75rem;
     }
+
+
 }
 
 @media (max-width: 480px) {
+
+
     .slide img {
         height: 16rem;
     }
+
+    .logos-fila-1 img, .logos-fila-2 img {
+        width: 8rem;
+    }
+
+
 }

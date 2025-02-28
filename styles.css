@@ -191,6 +191,10 @@ nav ul li a.active::after {
     margin-left: 4rem;
 }
 
+.texto2 {
+    margin-left: 4rem
+}
+
 .btn-mas{
     background-color: #FFC107;
     border-radius: 0.6rem;
@@ -371,7 +375,6 @@ nav ul li a.active::after {
     padding-bottom: 2rem;
     padding-right: 1rem;
     align-items: center;
-    
 }
 
 .imagen-servicios{
@@ -396,21 +399,14 @@ nav ul li a.active::after {
     
 }
 
- .contenido-servicios{
+.contenido-servicios {
     flex:1;
     display: flex;
     margin-left: 5rem;
     flex-direction: column;
-   
+
 }
 
-.contenido-servicios1 {
-    flex:1;
-    display: flex;
-    margin-left: 2rem;
-    flex-direction: column;
-    justify-content: center;
-}
 
 /* Reducir el espacio entre líneas */
 
@@ -572,28 +568,16 @@ nav ul li a.active::after {
         display: flex;
         right: 0;
     }
-
-    .texto1 {
-        margin-left: 2rem;
-    }
 }
 
 /* ---- AJUSTES GENERALES RESPONSIVE ---- */
 @media (max-width: 1024px) {
-
-    section {
-        margin: 0rem 2rem 2rem 2rem !important;
-    }
     .nuestros-servicios {
         flex-direction: column;
-        align-items: left;
+        align-items: center;
         text-align: left;
         gap: 2rem;
         padding: 2rem;
-    }
-
-    .contenido-servicios {
-        margin-left: 2rem;
     }
 
     .cuerpo1 {
@@ -621,6 +605,10 @@ nav ul li a.active::after {
         justify-content: center;
     }
 
+    .logos-fila-1, .logos-fila-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 
 }
 
@@ -629,7 +617,9 @@ nav ul li a.active::after {
         flex-direction: column;
     }
 
-
+    .texto1 {
+        margin-left: 1rem;
+    }
 
     .slide img {
         height: 19rem;
@@ -672,19 +662,47 @@ nav ul li a.active::after {
         font-size: 0.75rem;
     }
 
+    .cuerpo1{
+        margin: 0rem 1rem 1rem 1rem;
+    }
 
+    .nuestros-servicios {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
-
-
     .slide img {
         height: 16rem;
+    }
+
+    .texto1 {
+        margin-left: 2rem;
+      
+    }
+
+    .cuerpo1{
+        margin: 0rem 1rem 1rem 0rem;
+    }
+
+    .contenido-servicios {
+        margin-left: 1rem;
+        align-items: left;
+        justify-content: left;
     }
 
     .logos-fila-1 img, .logos-fila-2 img {
         width: 8rem;
     }
 
+    .nuestros-servicios {
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+    }
+
+    .texto2 {
+        margin-left: 3rem;
+    }
 
 }
